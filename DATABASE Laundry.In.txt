@@ -1,0 +1,77 @@
+CREATE DATABASE LaundryDB;
+USE LaundryDB;
+
+DROP TABLE IF EXISTS Pelanggan;
+DROP TABLE IF EXISTS Layanan;
+DROP TABLE IF EXISTS Pemesanan;
+DROP TABLE IF EXISTS Paket;
+DROP TABLE IF EXISTS Detail_Pemesanan;
+DROP TABLE IF EXISTS Kayawan;
+DROP TABLE IF EXISTS Pembayaran;
+
+START TRANSACTION;
+
+-- Tabel Pelanggan
+CREATE TABLE Pelanggan (
+    ID_Pelanggan INT PRIMARY KEY AUTO_INCREMENT,
+    Nama VARCHAR(100),
+    No_HP VARCHAR(20),
+    Alamat TEXT
+);
+
+-- Tabel Layanan
+CREATE TABLE Layanan (
+    ID_Layanan INT PRIMARY KEY AUTO_INCREMENT,
+    Nama_Layanan VARCHAR(100),
+    Deskripsi TEXT,
+    Harga_per_Kg DECIMAL(10, 2)
+);
+
+-- Tabel Pemesanan
+CREATE TABLE Pemesanan (
+    ID_Pemesanan INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Pelanggan INT,
+    ID_Layanan INT,
+    Status ENUM('Diproses', 'Selesai', 'Batal'),
+    Waktu_Pemesanan DATETIME,
+    FOREIGN KEY (ID_Pelanggan) REFERENCES Pelanggan(ID_Pelanggan),
+    FOREIGN KEY (ID_Layanan) REFERENCES Layanan(ID_Layanan)
+);
+
+-- Tabel Paket
+CREATE TABLE Paket (
+    ID_Paket INT PRIMARY KEY AUTO_INCREMENT,
+    Nama_Paket VARCHAR(100)
+);
+
+-- Tabel Detail_Pemesanan
+CREATE TABLE Detail_Pemesanan (
+    ID_Detail_Pemesanan INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Layanan INT,
+    ID_Paket INT,
+    Berat_Kg DECIMAL(5, 2),
+    Subtotal DECIMAL(10, 2),
+    FOREIGN KEY (ID_Layanan) REFERENCES Layanan(ID_Layanan),
+    FOREIGN KEY (ID_Paket) REFERENCES Paket(ID_Paket)
+);
+
+-- Tabel Karyawan
+CREATE TABLE Karyawan (
+    ID_Karyawan INT PRIMARY KEY AUTO_INCREMENT,
+    Nama_Karyawan VARCHAR(100),
+    No_HP VARCHAR(20),
+    Posisi VARCHAR(50)
+);
+
+-- Tabel Pembayaran
+CREATE TABLE Pembayaran (
+    ID_Pembayaran INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Karyawan INT,
+    ID_Paket INT,
+    Tanggal_Pembayaran DATE,
+    Status_Pembayaran ENUM('Lunas', 'Belum'),
+    Jenis_Pembayaran ENUM('Tunai', 'Transfer'),
+    Total DECIMAL(10, 2),
+    FOREIGN KEY (ID_Karyawan) REFERENCES Karyawan(ID_Karyawan),
+    FOREIGN KEY (ID_Paket) REFERENCES Paket(ID_Paket)
+);
