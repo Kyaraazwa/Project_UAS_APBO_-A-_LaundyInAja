@@ -1,5 +1,5 @@
 # UTS APBO (A) KELOMPOK 2
-Project ini disusun untuk memenuhi Nilai Ujian Tengah Semester Genap Matakuliah nalisis Pemrograman Berorientasi Objek, yang diampu oleh Bapak Adi Wahyu Pribadi, S.Si., M.Kom.
+Project ini disusun untuk memenuhi Nilai Ujian Tengah Semester Genap Matakuliah Analisis Pemrograman Berorientasi Objek, yang diampu oleh Bapak Adi Wahyu Pribadi, S.Si., M.Kom.
 
 Kami dari Kelompok 2 mengangkat topik Perancangan Aplikasi Laundry.In Aja, sebuah sistem berbasis aplikasi yang dirancang untuk mempermudah proses pengelolaan operasional usaha laundry. Melalui perancangan sistem ini, diharapkan aktivitas bisnis laundry dapat dilakukan secara lebih efisien, terstruktur, dan terdokumentasi dengan baik. Fitur-fitur utama yang kami implementasikan mencakup pencatatan data pemesanan layanan laundry, rincian berat dan subtotal layanan, pengelolaan informasi paket dan pembayaran, serta integrasi data karyawan sebagai bagian dari proses operasional.
 
@@ -25,145 +25,118 @@ Dengan adanya aplikasi ini, kami berharap dapat memberikan solusi sederhana namu
 
 # Table Master dan Relasi
 ### 1. Table Master
-CREATE TABLE user (
-  id_user int NOT NULL,
-  nama_user varchar(50) DEFAULT NULL,
-  email varchar(50) DEFAULT NULL,
-  password varchar(50) DEFAULT NULL,
-  role enum('Super Admin','Admin') DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE Pelanggan (
+    ID_Pelanggan INT PRIMARY KEY AUTO_INCREMENT,
+    Nama VARCHAR(100),
+    No_HP VARCHAR(20),
+    Alamat TEXT
+);
 
 | Nama Kolom   | Tipe Data                      | Keterangan             |
 |--------------|--------------------------------|------------------------|
-| id_user      | INT (PK)                       | ID unik pengguna       |
-| nama_user    | VARCHAR(50)                    | Nama lengkap pengguna  |
-| email        | VARCHAR(50)                    | Alamat email           |
-| password     | VARCHAR(50)                    | Kata sandi             |
-| role         | ENUM('Super Admin','Admin')    | Peran pengguna         |
+| iD_Pelanggan | INT (PK)                       | ID unik Pelanggan      |
+| Nama         | VARCHAR(100)                   | Nama lengkap pelanggan |
+| No_HP        | VARCHAR(20)                    | No. Handphone pelanggan|
+| Alamat       | TEXT                           | Alamat pengguna        |
 
 
-| Nama Kolom            | Tipe Data     | Keterangan                               |
-|-----------------------|---------------|------------------------------------------|
-| id_detail_penjualan   | INT (PK)      | ID detail penjualan                      |
-| jumlah_produk         | INT           | Jumlah produk terjual                    |
-| harga_satuan          | INT           | Harga satuan per produk                  |
-| id_transaksi_penjualan| INT (FK)      | Referensi ke tabel transaksi_penjualan |
-| id_produk             | INT (FK)      | Referensi ke tabel produk              |
-
-
-CREATE TABLE supplier (
-  id_supplier int NOT NULL,
-  nama_supplier varchar(50) DEFAULT NULL,
-  telepon varchar(15) DEFAULT NULL,
-  email varchar(50) DEFAULT NULL,
-  alamat text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE Layanan (
+    ID_Layanan INT PRIMARY KEY AUTO_INCREMENT,
+    Nama_Layanan VARCHAR(100),
+    Deskripsi TEXT,
+    Harga_per_Kg DECIMAL(10, 2)
+); ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 | Nama Kolom     | Tipe Data     | Keterangan               |
 |----------------|---------------|--------------------------|
-| id_supplier    | INT (PK)      | ID unik supplier         |
-| nama_supplier  | VARCHAR(50)   | Nama supplier            |
-| telepon        | VARCHAR(15)   | Nomor telepon            |
-| email          | VARCHAR(50)   | Alamat email             |
-| alamat         | TEXT          | Alamat lengkap           |
+| ID_Layanan     | INT (PK)      | ID unik Layanan          |
+| Nama_Layanan   | VARCHAR(100)  | Nama Layanan             |
+| Deskripsi      | TEXT          | Penjelasan Layanan       |
+| Harga_per_Kg   | DECIMAL(10, 2)| Harga laundry perKg      |
 
-CREATE TABLE kategori (
-  id_kategori int NOT NULL,
-  nama_kategori varchar(50) DEFAULT NULL,
-  keterangan text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE Paket (
+    ID_Paket INT PRIMARY KEY AUTO_INCREMENT,
+    Nama_Paket VARCHAR(100)
+); ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 | Nama Kolom     | Tipe Data     | Keterangan           |
 |----------------|---------------|----------------------|
-| id_kategori    | INT (PK)      | ID kategori produk   |
-| nama_kategori  | VARCHAR(50)   | Nama kategori        |
-| keterangan     | TEXT          | Deskripsi kategori   |
+| ID_Paket       | INT (PK)      | ID paket Laundry     |
+| nama_Paket     | VARCHAR(50)   | Nama Paket           |
 
-CREATE TABLE produk (
-  id_produk int NOT NULL,
-  nama_produk varchar(50) DEFAULT NULL,
-  harga_jual int DEFAULT NULL,
-  harga_beli int DEFAULT NULL,
-  stok int DEFAULT NULL,
-  id_kategori int DEFAULT NULL
+
+CREATE TABLE Admin (
+  ID_Admin int PRIMARY KEY AUTO_INCREMENT,
+  Nama_Admin varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 | Nama Kolom     | Tipe Data     | Keterangan             |
 |----------------|---------------|------------------------|
-| id_produk      | INT (PK)      | ID produk              |
-| nama_produk    | VARCHAR(50)   | Nama produk            |
-| harga_jual     | INT           | Harga jual produk      |
-| harga_beli     | INT           | Harga beli produk      |
-| stok           | INT           | Stok tersedia          |
-| id_kategori    | INT (FK)      | Referensi kategori     |
+| ID_Admin       | INT (PK)      | ID Admin               |
+| Nama_Admin     | VARCHAR(100)  | Nama Admin             |
+
 
 ### 1. Table Relasi
-CREATE TABLE pembelian (
-  id_pembelian int NOT NULL,
-  tanggal date DEFAULT NULL,
-  total_pembelian int DEFAULT NULL,
-  id_supplier int DEFAULT NULL,
-  id_user int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE Pemesanan (
+    ID_Pemesanan INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Pelanggan INT,
+    ID_Layanan INT,
+    Status ENUM('Diproses', 'Selesai', 'Batal'),
+    Waktu_Pemesanan DATETIME,
+    FOREIGN KEY (ID_Pelanggan) REFERENCES Pelanggan(ID_Pelanggan),
+    FOREIGN KEY (ID_Layanan) REFERENCES Layanan(ID_Layanan)
+); ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-| Nama Kolom       | Tipe Data     | Keterangan                         |
-|------------------|---------------|------------------------------------|
-| id_pembelian     | INT (PK)      | ID pembelian                       |
-| tanggal          | DATE          | Tanggal pembelian                  |
-| total_pembelian  | INT           | Total nilai pembelian              |
-| id_supplier      | INT (FK)      | Referensi ke tabel supplier      |
-| id_user          | INT (FK)      | Referensi ke tabel user          |
+| Nama Kolom       | Tipe Data                            | Keterangan                         |
+|------------------|--------------------------------------|------------------------------------|
+| ID_Pemesanan     | INT (PK)                             | ID pemesanan                       |
+| ID_Pelanggan     | INT (FK)                             | ID Pelanggan                       |
+| ID_Layanan       | INT (FK)                             | ID Layanan                         |
+| Status           | ENUM('Diproses', 'Selesai', 'Batal') | Status pemesanan          |
+| Waktu_Pemsanan   | DATETIME                             | tanggal pemesanan          |
 
----
+CREATE TABLE Detail_Pemesanan (
+    ID_Detail_Pemesanan INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Layanan INT,
+    ID_Paket INT,
+    Berat_Kg DECIMAL(5, 2),
+    Subtotal DECIMAL(10, 2),
+    FOREIGN KEY (ID_Layanan) REFERENCES Layanan(ID_Layanan),
+    FOREIGN KEY (ID_Paket) REFERENCES Paket(ID_Paket)
+);
 
-CREATE TABLE detail_pembelian (
-  id_detail_pembelian int NOT NULL,
-  id_pembelian int DEFAULT NULL,
-  id_produk int DEFAULT NULL,
-  jumlah_pembelian int DEFAULT NULL,
-  harga_satuan int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-| Nama Kolom         | Tipe Data     | Keterangan                              |
-|--------------------|---------------|-----------------------------------------|
-| id_detail_pembelian | INT (PK)     | ID detail pembelian                     |
-| id_pembelian        | INT (FK)     | Referensi ke tabel pembelian          |
-| id_produk           | INT (FK)     | Referensi ke tabel produk             |
-| jumlah_pembelian    | INT          | Jumlah produk yang dibeli               |
-| harga_satuan        | INT          | Harga satuan per produk                 |
-
-CREATE TABLE transaksi_penjualan (
-  id_transaksi_penjualan int NOT NULL,
-  total_penjualan int DEFAULT NULL,
-  tanggal date DEFAULT NULL,
-  metode_pembayaran enum('Tunai','E-Wallet') DEFAULT NULL,
-  id_user int DEFAULT NULL
-) 
-
-| Nama Kolom            | Tipe Data                        | Keterangan                          |
-|-----------------------|----------------------------------|-------------------------------------|
-| id_transaksi_penjualan| INT (PK)                         | ID transaksi penjualan              |
-| total_penjualan       | INT                              | Total nilai penjualan               |
-| tanggal               | DATE                             | Tanggal transaksi                   |
-| metode_pembayaran     | ENUM('Tunai','E-Wallet')         | Metode pembayaran                   |
-| id_user               | INT (FK)                         | Referensi ke tabel user           |
+| Nama Kolom         | Tipe Data     | Keterangan                         |
+|--------------------|---------------|------------------------------------|
+| ID_Detail_Pemesanan| INT (PK)      | ID pemesanan                       |
+| ID_Layanan         | INT (FK)      | ID Layanan                         |
+| ID_Paket           | INT (FK)      | ID Paket                           |
+| Berat_Kg           | DECIMAL(5, 2) | Total Berat Baju /Kg               |
+| Subtotal           | DECIMAL(10, 2)| Total Harga Pemesanan              |
 
 
-CREATE TABLE detail_penjualan (
-  id_detail_penjualan int NOT NULL,
-  jumlah_produk int DEFAULT NULL,
-  harga_satuan int DEFAULT NULL,
-  id_transaksi_penjualan int DEFAULT NULL,
-  id_produk int DEFAULT NULL
-)
+CREATE TABLE Pembayaran (
+    ID_Pembayaran INT PRIMARY KEY AUTO_INCREMENT,
+    ID_Karyawan INT,
+    ID_Paket INT,
+    Tanggal_Pembayaran DATE,
+    Status_Pembayaran ENUM('Lunas', 'Belum'),
+    Jenis_Pembayaran ENUM('Tunai', 'Transfer'),
+    Total DECIMAL(10, 2),
+    FOREIGN KEY (ID_Karyawan) REFERENCES Karyawan(ID_Karyawan),
+    FOREIGN KEY (ID_Paket) REFERENCES Paket(ID_Paket)
+); ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-| Nama Kolom            | Tipe Data                        | Keterangan                            |
-|-----------------------|----------------------------------|---------------------------------------|
-| id_transaksi_penjualan| INT (PK)                         | ID transaksi penjualan                |
-| total_penjualan       | INT                              | Total nilai penjualan                 |
-| tanggal               | DATE                             | Tanggal transaksi                     |
-| metode_pembayaran     | ENUM('Tunai','E-Wallet')         | Metode pembayaran                     |
-| id_user               | INT (FK)                         | Referensi ke tabel user             |
+| Nama Kolom         | Tipe Data                | Keterangan                   |
+|--------------------|--------------------------|------------------------------|
+| ID_Pembayaran      | INT (PK)                 | ID Peembayaran               |
+| ID_Karyawan        | INT (FK)                 | ID Layanan                   |
+| ID_Paket           | INT (FK)                 | ID Paket                     |
+| Tanggal_Pembayaran | ENUM('Lunas', 'Belum')   | Tanggal Pembayaran           |
+| Status_Pembayaran  | ENUM('Tunai', 'Transfer')| Status Pembayaran            | 
+| Jenis_Pembayaran   | ENUM('Tunai', 'Transfer')| Total Harga Pemesanan        | 
+| Total              | DECIMAL(10, 2)           | Total Pembayaran             | 
+
 
 # Class Diagram
 
