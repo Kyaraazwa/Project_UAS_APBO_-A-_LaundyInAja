@@ -164,20 +164,22 @@ CREATE TABLE Pembayaran (
 ![Image](https://github.com/user-attachments/assets/cb2d398b-2fe6-4710-ab7f-f3801c1bf18a)
 
 # Mockup
-![Image](https://github.com/user-attachments/assets/c6cc8bd8-9266-4826-be1e-872c821c93b1)
+![Image](https://github.com/user-attachments/assets/bd4dedb6-b7ef-4f6f-bfa4-67a42bf38d60)
 
-![Image](https://github.com/user-attachments/assets/3257dfa4-ead8-4eb6-a1e0-7dcab12eba7e)
+![Image](https://github.com/user-attachments/assets/3dc71f51-d844-47c9-99aa-36291fad37e1)
 
-![Image](https://github.com/user-attachments/assets/62661e1f-6325-4e42-9a13-d9fe0ed09e8b)
+![Image](https://github.com/user-attachments/assets/bfd8c429-16f7-46d6-af87-5156f8149872)
 
-![Image](https://github.com/user-attachments/assets/8a4312b0-0ed2-406e-976e-c103caaf38d2)
+![Image](https://github.com/user-attachments/assets/8d989ff3-cb9f-420e-bf91-d7bd91f061e4)
 
-![Image](https://github.com/user-attachments/assets/6fa669b5-4d00-49ea-9765-94518f6f6872)
+![Image](https://github.com/user-attachments/assets/4c645212-d3c1-4ec8-9521-2794a6f1a46b)
 
-![Image](https://github.com/user-attachments/assets/013f7b5c-e683-4d82-b40d-07193ed5490f)
+![Image](https://github.com/user-attachments/assets/b4ecc49f-9cae-4145-b83d-47abbcd4b6cf)
 
-![Image](https://github.com/user-attachments/assets/b8b3f12a-3a4c-4970-adaa-03fbd2ee3f08)
+![Image](https://github.com/user-attachments/assets/8fe9ca78-8e02-4aa9-a0d6-ff733d547dce)
 
-![Image](https://github.com/user-attachments/assets/292b4e34-1046-4175-86cf-60a8044b7fed)
+![Image](https://github.com/user-attachments/assets/2a2c9c1a-22fd-4559-970c-bda3790c47da)
 
-![Image](https://github.com/user-attachments/assets/36809176-3323-4dcf-8c1b-4a3576c66588)
+![Image](https://github.com/user-attachments/assets/c7db24b7-7728-4e89-bcc2-03143e998fe2)
+
+![Image](https://github.com/user-attachments/assets/a7cdef02-f7bc-4934-bcc0-047df21cdc93)
