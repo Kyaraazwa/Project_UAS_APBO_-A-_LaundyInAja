@@ -139,9 +139,47 @@ CREATE TABLE Pembayaran (
 
 
 # Class Diagram
+# Use Case
 
 
 # Wireframe
+![Image](https://github.com/user-attachments/assets/904ab6b2-ec24-47f7-8a99-9b86a4ea1c45)
 
+![Image](https://github.com/user-attachments/assets/8513ffba-bc96-4982-b6b3-44271ae3a89c)
+
+![Image](https://github.com/user-attachments/assets/e51077fe-1a5e-41cd-86ec-6af0639eafa7)
+
+![Image](https://github.com/user-attachments/assets/af05abbb-3907-44e0-ac4f-1861f2ffd105)
+
+![Image](https://github.com/user-attachments/assets/64e2c110-3314-4d72-b241-dffbfce3b219)
+
+![Image](https://github.com/user-attachments/assets/a094190c-e1a7-4701-8bac-37a89cb55817)
+
+![Image](https://github.com/user-attachments/assets/90b37728-1399-4ad1-933b-fce1dcadc494)
+
+![Image](https://github.com/user-attachments/assets/7ef4d7a8-285f-49d8-89e1-05f71eb258af)
+
+![Image](https://github.com/user-attachments/assets/7547d69e-2f42-470e-9c40-ecb4b81df5bd)
+
+![Image](https://github.com/user-attachments/assets/cb2d398b-2fe6-4710-ab7f-f3801c1bf18a)
 
 # Mockup
+![Image](https://github.com/user-attachments/assets/c6cc8bd8-9266-4826-be1e-872c821c93b1)
+
+![Image](https://github.com/user-attachments/assets/bacc034a-d270-40d9-a035-01aa4725ba33)
+
+![Image](https://github.com/user-attachments/assets/3257dfa4-ead8-4eb6-a1e0-7dcab12eba7e)
+
+![Image](https://github.com/user-attachments/assets/62661e1f-6325-4e42-9a13-d9fe0ed09e8b)
+
+![Image](https://github.com/user-attachments/assets/8a4312b0-0ed2-406e-976e-c103caaf38d2)
+
+![Image](https://github.com/user-attachments/assets/6fa669b5-4d00-49ea-9765-94518f6f6872)
+
+![Image](https://github.com/user-attachments/assets/013f7b5c-e683-4d82-b40d-07193ed5490f)
+
+![Image](https://github.com/user-attachments/assets/b8b3f12a-3a4c-4970-adaa-03fbd2ee3f08)
+
+![Image](https://github.com/user-attachments/assets/292b4e34-1046-4175-86cf-60a8044b7fed)
+
+![Image](https://github.com/user-attachments/assets/36809176-3323-4dcf-8c1b-4a3576c66588)
