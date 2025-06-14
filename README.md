@@ -166,8 +166,6 @@ CREATE TABLE Pembayaran (
 # Mockup
 ![Image](https://github.com/user-attachments/assets/c6cc8bd8-9266-4826-be1e-872c821c93b1)
 
-![Image](https://github.com/user-attachments/assets/bacc034a-d270-40d9-a035-01aa4725ba33)
-
 ![Image](https://github.com/user-attachments/assets/3257dfa4-ead8-4eb6-a1e0-7dcab12eba7e)
 
 ![Image](https://github.com/user-attachments/assets/62661e1f-6325-4e42-9a13-d9fe0ed09e8b)
