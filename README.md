@@ -15,7 +15,10 @@ Dengan adanya aplikasi ini, kami berharap dapat memberikan solusi sederhana namu
  
 
 # Aktor yang menggunakan aplikasi Laundri.In Aja
-1. Admin sebagai aktor tunggal
+Admin sebagai aktor tunggal
+
+# Link Youtube 
+https://github.com/Kyaraazwa/UTS_APBO_-A-/blob/main/README.md
 
 # Usecase
 ![Image](https://github.com/user-attachments/assets/507c630b-6c5f-4255-b575-e28729c14d17)
@@ -93,8 +96,8 @@ CREATE TABLE Pemesanan (
 | ID_Pemesanan     | INT (PK)                             | ID pemesanan                       |
 | ID_Pelanggan     | INT (FK)                             | ID Pelanggan                       |
 | ID_Layanan       | INT (FK)                             | ID Layanan                         |
-| Status           | ENUM('Diproses', 'Selesai', 'Batal') | Status pemesanan          |
-| Waktu_Pemsanan   | DATETIME                             | tanggal pemesanan          |
+| Status           | ENUM('Diproses', 'Selesai', 'Batal') | Status pemesanan                   |
+| Waktu_Pemsanan   | DATETIME                             | tanggal pemesanan                  |
 
 CREATE TABLE Detail_Pemesanan (
     ID_Detail_Pemesanan INT PRIMARY KEY AUTO_INCREMENT,
