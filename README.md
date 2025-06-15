@@ -18,7 +18,7 @@ Dengan adanya aplikasi ini, kami berharap dapat memberikan solusi sederhana namu
 Admin sebagai aktor tunggal
 
 # Link Youtube 
-https://github.com/Kyaraazwa/UTS_APBO_-A-/blob/main/README.md
+https://youtu.be/Dxg3aEfnbB4?si=cie38ZhnDLNnxYlb
 
 # Usecase
 ![Image](https://github.com/user-attachments/assets/507c630b-6c5f-4255-b575-e28729c14d17)
