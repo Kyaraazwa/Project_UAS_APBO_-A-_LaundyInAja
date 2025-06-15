@@ -18,10 +18,10 @@ Dengan adanya aplikasi ini, kami berharap dapat memberikan solusi sederhana namu
 1. Admin sebagai aktor tunggal
 
 # Usecase
-
+![Image](https://github.com/user-attachments/assets/507c630b-6c5f-4255-b575-e28729c14d17)
 
 # Entity Relationship Diagram
-
+![Image](https://github.com/user-attachments/assets/5e4b844e-2946-4632-af16-2b85fcfab11d)
 
 # Table Master dan Relasi
 ### 1. Table Master
@@ -139,7 +139,23 @@ CREATE TABLE Pembayaran (
 
 
 # Class Diagram
-# Use Case
+![Image](https://github.com/user-attachments/assets/78fd9bd1-9dae-412b-b358-353dc5dd39c7)
+
+# Sequence Diagram
+SEQUENCE DIAGRAM PELANGGAN 
+![Image](https://github.com/user-attachments/assets/5c820735-0ff8-4342-a8da-8e56bce1f398)
+
+SEQUENCE DIAGRAM JENIS PAKET
+![Image](https://github.com/user-attachments/assets/46c47617-a043-4f85-a67b-1327e149ad7a)
+
+SEQUENCE DIAGRAM LAYANAN 
+![Image](https://github.com/user-attachments/assets/fe421f07-3a40-4406-9a8a-d66b34158236)
+
+SEQUENCE DIAGRAM PESANAN
+![Image](https://github.com/user-attachments/assets/40ff7a35-e73a-4e09-b9e6-7dc70040efbb)
+
+SEQUENCE DIAGRAM PEMBAYARAN 
+![Image](https://github.com/user-attachments/assets/4eb6cd0b-0a38-45ed-9391-544dd4df57e5)
 
 
 # Wireframe
