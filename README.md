@@ -14,11 +14,23 @@ Dengan adanya aplikasi ini, kami berharap dapat memberikan solusi sederhana namu
 | 4  | Lintang Triandini     | 4523210060  |
  
 
-# Aktor yang menggunakan aplikasi Laundri.In Aja
-Admin sebagai aktor tunggal
+# Role Actor dan Fitur Sistem
+Sistem laundryin.Aja dirancang khusus untuk digunakan oleh satu peran utama, yaitu pelaku bisnis laundry (pemilik atau karyawan) yang bertindak sebagai admin. Sistem ini memang hanya diperuntukkan bagi admin karena merupakan permintaan langsung dari pelaku usaha yang menginginkan sistem internal tanpa melibatkan pelanggan.
+Hal ini disebabkan karena sebagian besar pelanggan datang langsung ke lokasi, sehingga tidak diperlukan aplikasi khusus untuk customer. Fokus utama sistem ini adalah membantu pelaku usaha dalam mengelola pesanan, layanan, pembayaran, dan operasional laundry secara efisien dan praktis.
+Berikut adalah fitur-fitur utama yang tersedia dalam sistem:
+1. (READ) Login: Akses sistem oleh admin.
+2. (CRUD) Kelola Data Pelanggan: Menambahkan, mengubah, menghapus, dan melihat informasi pelanggan.
+3. (CRUD) Tambah/Ubah/Hapus Pesanan: Mengelola data pesanan laundry secara lengkap.
+4. (CRUD) Kelola Jenis Layanan & Harga: Menyusun dan mengatur jenis layanan (misalnya cuci, setrika, atau paket tertentu) beserta harga masing-masing.
+5. (UPDATE) Update Status Pesanan: Mengubah status pesanan menjadi “diproses”, “selesai”, atau “diambil”.
+6. (UPDATE) Mengatur Estimasi Selesai Pesanan: Menentukan tanggal estimasi selesai saat pesanan dibuat.
+7. (CRU) Input Pembayaran & Status Transaksi: Mencatat pembayaran yang dilakukan pelanggan dan statusnya (lunas/belum).
+8. (READ) Lihat dan Ekspor Bukti Pembayaran: Menyediakan bukti pembayaran yang bisa dilihat atau diunduh.
+
 
 # Link Youtube 
-https://youtu.be/Dxg3aEfnbB4?si=cie38ZhnDLNnxYlb
+video pertama : https://youtu.be/Dxg3aEfnbB4?si=cie38ZhnDLNnxYlb
+video kedua : https://youtu.be/pFj4Iyuc9Gk
 
 # Usecase
 ![Image](https://github.com/user-attachments/assets/507c630b-6c5f-4255-b575-e28729c14d17)
@@ -142,7 +154,7 @@ CREATE TABLE Pembayaran (
 
 
 # Class Diagram
-![Image](https://github.com/user-attachments/assets/78fd9bd1-9dae-412b-b358-353dc5dd39c7)
+![Image](https://github.com/user-attachments/assets/9a9bf165-0623-499d-8d0e-481e80629ea5)
 
 # Sequence Diagram
 SEQUENCE DIAGRAM PELANGGAN 
@@ -202,3 +214,11 @@ SEQUENCE DIAGRAM PEMBAYARAN
 ![Image](https://github.com/user-attachments/assets/c7db24b7-7728-4e89-bcc2-03143e998fe2)
 
 ![Image](https://github.com/user-attachments/assets/a7cdef02-f7bc-4934-bcc0-047df21cdc93)
+
+# Persona 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/32ea4403-ab12-40b6-b475-0ab0089dcc0c" />
+
+# Bukti Wawancara
+![Image](https://github.com/user-attachments/assets/d83772ca-d055-4007-8932-ea78a17fa652)
+
+![Image](https://github.com/user-attachments/assets/136bddb9-bf42-429e-80ec-009b5944d635)
